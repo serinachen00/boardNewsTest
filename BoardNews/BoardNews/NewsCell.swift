@@ -2,27 +2,20 @@
 //  NewsCell.swift
 //  BoardNews
 //
-//  Created by Serina Chen on 5/8/20.
+//  Created by Serina Chen on 5/13/20.
 //  Copyright © 2020 Serina Chen. All rights reserved.
 //
 
 import UIKit
-
-class NewsCell: UITableViewCell {
-
-    @IBOutlet weak var imgView: UIImageView!
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var author: UILabel!
+class NewsCell: UITableViewCell{
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    static let reuseIdentifier = "NewsCell"
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-
+    
 }
